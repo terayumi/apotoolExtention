@@ -1,0 +1,17 @@
+#updown{
+  position: absolute;
+  bottom: 200px;
+  background-color: #2F6098;
+  color: white;
+  padding: 2px;
+  cursor: pointer;
+}
+
+#rece{
+  z-index: 3000;
+  position: absolute;
+  bottom: 0px;
+  width: 250px;
+  height: 200px;
+}
+
