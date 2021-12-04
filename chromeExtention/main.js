@@ -36,8 +36,9 @@ window.onmessage = function (e) {
   if (data == true) {
     console.log('true');
   } else {
-    let name = findName();
-    data.name = name;
+    let name_id = findName();
+    data.name = name_id[0];
+    data.id=name_id[1];
     iframeObj.postMessage(data, serverIP + "/extention");
 
   }
@@ -58,13 +59,19 @@ function sousin(data) {
 }
 
 function findName() {
-  let name = document.getElementsByClassName('link')[0];
-  console.log(name);
+
+  
+  let name = document.getElementsByClassName('link')[0].innerText;
+  let id=document.getElementById('registration_number').innerText;
+  let name_id;
+  console.log(name+id);
   if(name==undefined){
     return false;
   }else{
-    return name.innerText;
+    name_id= [name.innerText,id]
   }
+  return name_id;
+
   /*if (takuji.checked) {
     console.log('checked');
     socket.emit('add', { room: i, takuji: true })
