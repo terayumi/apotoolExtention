@@ -1,4 +1,5 @@
 const serverIP = 'http://192.168.0.139:8000'
+//const serverIP = 'http://localhost:8000'
 console.log('extention main.js');
 window.onload = function () {
   let body = document.getElementsByClassName('page-container');
@@ -37,6 +38,7 @@ window.onmessage = function (e) {
     console.log('true');
   } else {
     let name_id = findName();
+    console.log(name_id);
     data.name = name_id[0];
     data.id=name_id[1];
     iframeObj.postMessage(data, serverIP + "/extention");
@@ -63,13 +65,14 @@ function findName() {
   
   let name = document.getElementsByClassName('link')[0].innerText;
   let id=document.getElementById('registration_number').innerText;
-  let name_id;
+  let name_id=[];
   console.log(name+id);
   if(name==undefined){
     return false;
   }else{
-    name_id= [name.innerText,id]
+    name_id= [name,id]
   }
+  console.log(name_id+'hai');
   return name_id;
 
   /*if (takuji.checked) {
