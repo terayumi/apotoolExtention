@@ -1,5 +1,5 @@
-const serverIP = 'http://192.168.0.139:8000'
-//const serverIP = 'http://localhost:8000'
+//const serverIP = 'http://192.168.0.139:8000'
+const serverIP = 'http://localhost:8000'
 console.log('extention main.js');
 window.onload = function () {
   let body = document.getElementsByClassName('page-container');
@@ -62,15 +62,15 @@ function sousin(data) {
 
 function findName() {
 
-  
-  let name = document.getElementsByClassName('link')[0].innerText;
-  let id=document.getElementById('registration_number').innerText;
+  console.log(document.getElementsByClassName('link')[0]);
+  let name = document.getElementsByClassName('link')[0];
+  let id=document.getElementById('registration_number');
   let name_id=[];
   console.log(name+id);
-  if(name==undefined){
-    return false;
+  if(name){
+    name_id= [name.innerText,id.innerText]
   }else{
-    name_id= [name,id]
+    return false;
   }
   console.log(name_id+'hai');
   return name_id;
