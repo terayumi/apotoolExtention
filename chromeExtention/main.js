@@ -22,7 +22,7 @@ document.addEventListener('click',function(e){
       updown=0;
     }else{
       e.target.innerText='受付操作を非表示';
-      e.target.style.bottom='200px';
+      e.target.style.bottom='270px';
       document.getElementById('rece').style.display='block';
       updown=1;
     }

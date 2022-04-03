@@ -1,6 +1,6 @@
 #updown{
   position: absolute;
-  bottom: 200px;
+  bottom: 270px;
   background-color: #2F6098;
   color: white;
   padding: 2px;
@@ -12,6 +12,6 @@
   position: absolute;
   bottom: 0px;
   width: 250px;
-  height: 230px;
+  height: 270px;
 }
 
