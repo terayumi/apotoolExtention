@@ -1,5 +1,5 @@
-//const serverIP = 'http://192.168.0.139:8000'
-const serverIP = 'http://localhost:8000'
+const serverIP = 'http://192.168.0.139:8000'
+//const serverIP = 'http://localhost:8000'
 console.log('extention main.js');
 window.onload = function () {
   let body = document.getElementsByClassName('page-container');
